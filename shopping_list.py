@@ -18,11 +18,12 @@ def add_new_shopping_list(lists_by_name, new_list_name):
       lists_by_name: dict of shopping lists
       new_list_name: string name of the new list to add
     Returns:
-      None
+      No
     """
+    lists_by_name[new_list_name] = []
 
-    # your code here! 
-    pass
+
+    
 
 
 def remove_shopping_list(lists_by_name, list_name_to_remove):
@@ -38,8 +39,9 @@ def remove_shopping_list(lists_by_name, list_name_to_remove):
       None
     """
 
-    # your code here! 
-    pass
+    del lists_by_name[list_name_to_remove]
+    
+
 
 
 def add_to_shopping_list(lists_by_name, list_name, items):
@@ -53,8 +55,8 @@ def add_to_shopping_list(lists_by_name, list_name, items):
       None
     """
 
-    # your code here! 
-    pass
+    lists_by_name[list_name].extend(items)
+    
 
 
 def remove_from_shopping_list(lists_by_name, list_name, items):
